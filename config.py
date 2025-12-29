@@ -4,38 +4,38 @@
 
 import os
 
-# Login feature, if you want then True , if you don't want then False
+# Login feature
 LOGIN_SYSTEM = os.environ.get("LOGIN_SYSTEM", "True").lower() == "true"
 
-if LOGIN_SYSTEM == False:
-STRING_SESSION = os.environ.get("STRING_SESSION", "")
+if LOGIN_SYSTEM is False:
+    STRING_SESSION = os.environ.get("STRING_SESSION", "")
 else:
-STRING_SESSION = None
+    STRING_SESSION = None
 
-# Bot token @Botfather
+# Bot token
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
-# Your API ID from my.telegram.org
-API_ID = int(os.environ.get("API_ID",30720387 ""))
+# API ID
+API_ID = int(os.environ.get("API_ID", "30720387"))
 
-# Your API Hash from my.telegram.org
-API_HASH = os.environ.get("API_HASH",2eeb9d06eb049619e747488846496bfa "")
+# API HASH
+API_HASH = os.environ.get(
+    "API_HASH",
+    "2eeb9d06eb049619e747488846496bfa"
+)
 
-# Your Owner / Admin Id For Broadcast 
+# Admin ID
 ADMINS = int(os.environ.get("ADMINS", "6690830189"))
 
-# Your Channel Id In Which Bot Upload Downloaded Video/File/Message etc.
-# And Make Your Bot Admin In this channel with full rights.
-# if you don't want to upload in channel then leave it blank don't fill anything.
-CHANNEL_ID = os.environ.get("CHANNEL_ID", -1003659159660"")
+# Channel ID
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1003659159660"))
 
-# Your Mongodb Database Url
-# Warning - Give Db uri in deploy server environment variable, don't give in repo.
-DB_URI = os.environ.get("DB_URI",mongodb+srv://rishupadhyay369_db_user:Kt4Q2zYLs3UrAXUh@cluster0.dftynvv.mongodb.net/?appName=Cluster0 "") # Warning - Give Db uri in deploy server environment variable, don't give in repo.
+# MongoDB
+DB_URI = os.environ.get("DB_URI",mongodb+srv://rishupadhyay369_db_user:Kt4Q2zYLs3UrAXUh@cluster0.dftynvv.mongodb.net/?appName=Cluster0 "")
 DB_NAME = os.environ.get("DB_NAME", "vjsavecontentbot")
 
-# Increase time as much as possible to avoid floodwait, spamming and tg account ban issues.
-WAITING_TIME = int(os.environ.get("WAITING_TIME", "10")) # time in seconds
+# Flood wait
+WAITING_TIME = int(os.environ.get("WAITING_TIME", "10"))
 
-# If You Want Error Message In Your Personal Message Then Turn It True Else If You Don't Want Then Flase
-ERROR_MESSAGE = bool(os.environ.get('ERROR_MESSAGE', True))
+# Error message
+ERROR_MESSAGE = os.environ.get("ERROR_MESSAGE", "True").lower() == "true"
