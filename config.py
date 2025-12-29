@@ -31,8 +31,10 @@ ADMINS = int(os.environ.get("ADMINS", "6690830189"))
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1003659159660"))
 
 # MongoDB
-DB_URI = os.environ.get("DB_URI",mongodb+srv://rishupadhyay369_db_user:Kt4Q2zYLs3UrAXUh@cluster0.dftynvv.mongodb.net/?appName=Cluster0 "")
-DB_NAME = os.environ.get("DB_NAME", "vjsavecontentbot")
+DB_URI = os.environ.get(
+    "DB_URI",
+    "mongodb+srv://rishupadhyay369_db_user:Kt4Q2zYLs3UrAXUh@cluster0.dftynvv.mongodb.net/?appName=Cluster0"
+)
 
 # Flood wait
 WAITING_TIME = int(os.environ.get("WAITING_TIME", "10"))
